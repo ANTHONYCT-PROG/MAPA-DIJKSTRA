@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Dijkstra</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        #map { height: 100vh; }
+        .controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        button { 
+            background-color: #007bff; 
+            color: white; 
+            border: none; 
+            padding: 10px 15px; 
+            border-radius: 3px; 
+            cursor: pointer; 
+        }
+        button:hover { background-color: #0056b3; }
+        #status { margin-top: 10px; font-style: italic; }
+    </style>
+</head>
+<body>
+
+    <div id="map"></div>
+
+    <div class="controls">
+        <h3 id="place-name">Cargando...</h3>
+        <p>1. Clic en el mapa para <b>INICIO</b></p>
+        <p>2. Clic de nuevo para <b>DESTINO</b></p>
+        <button id="reset-btn">Reiniciar</button>
+        <div id="status"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="/static/main.js"></script>
+
+</body>
+</html>
